@@ -1,0 +1,173 @@
+{
+  "jobId": "video-mws49rt2",
+  "duration": 202.7153020833333,
+  "resolution": {
+    "width": 540,
+    "height": 960
+  },
+  "fps": 24,
+  "timeline": [
+    {
+      "start": 0,
+      "end": 5.27359375,
+      "subtitle": "Welcome to our lesson on daily life and families. Let's start reading!",
+      "translation": "日常生活と家族"
+    },
+    {
+      "start": 5.27359375,
+      "end": 16.1431875,
+      "subtitle": "Matt works in London, but flats are very expensive there. So, he lives in Barcelona, Spain, where flats are nice and big and not expensive.",
+      "translation": "マットはロンドンで働いていますが、アパートがとても高いです。そのため、彼はスペインのバルセロナに住んでいます。そこではアパートが素敵で広く、高くありません。"
+    },
+    {
+      "start": 16.1431875,
+      "end": 27.871927083333333,
+      "subtitle": "He flies from Barcelona to London on Monday, works for three days, and stays with his sister. Then he flies back to Barcelona and works from home two days a week.",
+      "translation": "彼は月曜日にバルセロナからロンドンへ飛び、3日間働き、姉妹の家に泊まります。その後、バルセロナに戻り、週に2日自宅で仕事をします。"
+    },
+    {
+      "start": 27.871927083333333,
+      "end": 38.497708333333335,
+      "subtitle": "Matt doesn’t speak Spanish very well, so he studies at a language school on Saturday. He loves Barcelona; it's a beautiful city and a great place to live.",
+      "translation": "マットはスペイン語があまり得意ではないので、土曜日に語学学校で勉強しています。彼はバルセロナが大好きです。美しい街で、住むのに素晴らしい場所です。"
+    },
+    {
+      "start": 38.497708333333335,
+      "end": 55.33898958333334,
+      "subtitle": "Which sentence is true about Matt? A: He lives and works in London. B: He lives in Barcelona and works in London. C: He speaks Spanish very well.",
+      "translation": "マットについて正しい文はどれですか？"
+    },
+    {
+      "start": 55.33898958333334,
+      "end": 60.77247916666667,
+      "subtitle": "The correct answer is B: He lives in Barcelona and works in London.",
+      "translation": "B：彼はバルセロナに住んでいて、ロンドンで働いています。"
+    },
+    {
+      "start": 60.77247916666667,
+      "end": 68.61973958333334,
+      "subtitle": "What does Matt say about flats in London?",
+      "translation": "マットはロンドンのアパートについて何と言っていますか？"
+    },
+    {
+      "start": 68.61973958333334,
+      "end": 70.848875,
+      "subtitle": "They’re very expensive.",
+      "translation": "それらはとても高いです。"
+    },
+    {
+      "start": 70.848875,
+      "end": 78.72309375,
+      "subtitle": "Pablo from Spain and Alicia from Argentina are married and live in New York. Their family is truly international!",
+      "translation": "スペイン出身のパブロとアルゼンチン出身のアリシアは結婚しており、ニューヨークに住んでいます。彼らの家族は本当に国際的です！"
+    },
+    {
+      "start": 78.72309375,
+      "end": 90.03387500000001,
+      "subtitle": "Alicia's sister Daniela, 46, lives in Buenos Aires with their mother. Her brother Carlos, 37, lives and works in São Paulo, Brazil.",
+      "translation": "アリシアの姉ダニエラ（46歳）は母親とブエノスアイレスに住んでいます。彼女の弟カルロス（37歳）はブラジルのサンパウロに住み、働いています。"
+    },
+    {
+      "start": 90.03387500000001,
+      "end": 98.91817708333335,
+      "subtitle": "Pablo and Alicia have two children. Their son Alex, 19, is at university in Mexico, where he also lives.",
+      "translation": "パブロとアリシアには2人の子供がいます。彼らの息子アレックス（19歳）はメキシコの大学に通っており、そこにも住んでいます。"
+    },
+    {
+      "start": 98.91817708333335,
+      "end": 105.19920833333335,
+      "subtitle": "Their daughter María, 24, lives in Istanbul with her Turkish husband, Mehmet.",
+      "translation": "彼らの娘マリア（24歳）はトルコ人の夫メフメトとイスタンブールに住んでいます。"
+    },
+    {
+      "start": 105.19920833333335,
+      "end": 114.11459375000001,
+      "subtitle": "True or False: Pablo and Alicia have two small children.",
+      "translation": "真実か嘘か：パブロとアリシアには2人の幼い子供がいます。"
+    },
+    {
+      "start": 114.11459375000001,
+      "end": 118.62191666666668,
+      "subtitle": "False. Their children are 19 and 24.",
+      "translation": "間違いです。彼らの子供たちは19歳と24歳です。"
+    },
+    {
+      "start": 118.62191666666668,
+      "end": 126.70138541666668,
+      "subtitle": "Where does Alicia's brother Carlos live?",
+      "translation": "アリシアの兄弟カルロスはどこに住んでいますか？"
+    },
+    {
+      "start": 126.70138541666668,
+      "end": 128.11783333333335,
+      "subtitle": "Brazil.",
+      "translation": "ブラジルです。"
+    },
+    {
+      "start": 128.11783333333335,
+      "end": 137.68448958333335,
+      "subtitle": "Maria writes to Eileen, sharing a photo of her small family on holiday: her husband Greg, daughter Linda, and son Jeff.",
+      "translation": "マリアはアイリーンに手紙を書き、休暇中の小さな家族（夫のグレッグ、娘のリンダ、息子のジェフ）の写真を共有しています。"
+    },
+    {
+      "start": 137.68448958333335,
+      "end": 147.077,
+      "subtitle": "Her parents, Tom, American, from San Francisco, and Elizabetta, from Warsaw, Poland, are also in the photo.",
+      "translation": "彼女の両親、トム（アメリカ人、サンフランシスコ出身）とエリザベッタ（ポーランドのワルシャワ出身）も写真に写っています。"
+    },
+    {
+      "start": 147.077,
+      "end": 156.55340625,
+      "subtitle": "Maria, a teacher, and Greg, who works in an office, live in Washington with their children. Greg's parents are also in Washington.",
+      "translation": "教師であるマリアとオフィスで働くグレッグは、子供たちとワシントンに住んでいます。グレッグの両親もワシントンにいます。"
+    },
+    {
+      "start": 156.55340625,
+      "end": 163.24079166666667,
+      "subtitle": "However, Maria's parents live in California, so they usually have holidays together.",
+      "translation": "しかし、マリアの両親はカリフォルニアに住んでいるため、彼らはたいてい一緒に休暇を過ごします。"
+    },
+    {
+      "start": 163.24079166666667,
+      "end": 172.12244791666666,
+      "subtitle": "Maria has two brothers not in the photo: Daniel, an English teacher in Mexico City, and Jon, who lives in Moscow.",
+      "translation": "マリアには写真に写っていない2人の兄弟がいます。ダニエルはメキシコシティで英語の先生をしており、ジョンはモスクワに住んでいます。"
+    },
+    {
+      "start": 172.12244791666666,
+      "end": 181.30595833333334,
+      "subtitle": "Jon's Russian wife, Anna, and their five-year-old daughter, Olga, who speaks Russian and English, sometimes join them for holidays.",
+      "translation": "ジョンのロシア人の妻アンナと、ロシア語と英語を話す5歳の娘オルガは、時々休暇を一緒に過ごします。"
+    },
+    {
+      "start": 181.30595833333334,
+      "end": 188.87457291666666,
+      "subtitle": "Where do Greg and Maria live?",
+      "translation": "グレッグとマリアはどこに住んでいますか？"
+    },
+    {
+      "start": 188.87457291666666,
+      "end": 190.48839583333333,
+      "subtitle": "Washington.",
+      "translation": "ワシントンです。"
+    },
+    {
+      "start": 190.48839583333333,
+      "end": 197.09338541666665,
+      "subtitle": "Who is Jon's daughter?",
+      "translation": "ジョンの娘は誰ですか？"
+    },
+    {
+      "start": 197.09338541666665,
+      "end": 198.50983333333332,
+      "subtitle": "Olga.",
+      "translation": "オルガです。"
+    },
+    {
+      "start": 198.50983333333332,
+      "end": 202.7153020833333,
+      "subtitle": "You've completed the lesson. Keep practicing your English!",
+      "translation": "レッスン完了！"
+    }
+  ]
+}

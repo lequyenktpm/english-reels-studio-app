@@ -1,0 +1,233 @@
+{
+  "jobId": "video-mws3tebg",
+  "duration": 256.3859895833333,
+  "resolution": {
+    "width": 540,
+    "height": 960
+  },
+  "fps": 24,
+  "timeline": [
+    {
+      "start": 0,
+      "end": 9.441572916666665,
+      "subtitle": "Welcome to our reading practice! Today, we'll read about Matt's unique daily commute and then learn about an international family.",
+      "translation": "リーディング練習へようこそ！今日は、マットのユニークな通勤について読み、その後、国際的な家族について学びます。"
+    },
+    {
+      "start": 9.441572916666665,
+      "end": 13.888229166666665,
+      "subtitle": "Matt works in London, but flats there are very expensive.",
+      "translation": "マットはロンドンで働いていますが、そこのアパートはとても高いです。"
+    },
+    {
+      "start": 13.888229166666665,
+      "end": 19.76290625,
+      "subtitle": "In Barcelona, Spain, flats are not expensive, and they are nice and big.",
+      "translation": "スペインのバルセロナでは、アパートは高くなく、素敵で広いです。"
+    },
+    {
+      "start": 19.76290625,
+      "end": 23.6174375,
+      "subtitle": "So, Matt works in London but lives in Barcelona!",
+      "translation": "だから、マットはロンドンで働いていますが、バルセロナに住んでいます！"
+    },
+    {
+      "start": 23.6174375,
+      "end": 27.344260416666668,
+      "subtitle": "He flies from Barcelona to London on Monday.",
+      "translation": "彼は月曜日にバルセロナからロンドンへ飛行機で移動します。"
+    },
+    {
+      "start": 27.344260416666668,
+      "end": 31.5355,
+      "subtitle": "He works in London for three days and stays with his sister.",
+      "translation": "彼はロンドンで3日間働き、妹の家に滞在します。"
+    },
+    {
+      "start": 31.5355,
+      "end": 36.307239583333335,
+      "subtitle": "Then he flies back to Barcelona and works from home two days a week.",
+      "translation": "その後、彼はバルセロナに戻り、週に2日自宅で仕事をします。"
+    },
+    {
+      "start": 36.307239583333335,
+      "end": 41.65945833333333,
+      "subtitle": "Matt doesn't speak Spanish very well, so he studies at a language school.",
+      "translation": "マットはスペイン語があまり得意ではないので、語学学校で勉強しています。"
+    },
+    {
+      "start": 41.65945833333333,
+      "end": 45.11926041666667,
+      "subtitle": "He goes to Spanish classes on Saturday.",
+      "translation": "彼は土曜日にスペイン語の授業に行きます。"
+    },
+    {
+      "start": 45.11926041666667,
+      "end": 49.99547916666667,
+      "subtitle": "He loves Barcelona; it's a beautiful city and a great place to live.",
+      "translation": "彼はバルセロナが大好きです。美しい街で、住むのに素晴らしい場所です。"
+    },
+    {
+      "start": 49.99547916666667,
+      "end": 62.54088541666667,
+      "subtitle": "Which sentence about Matt is true?",
+      "translation": "マットについて正しい文はどれですか？"
+    },
+    {
+      "start": 62.54088541666667,
+      "end": 67.41710416666668,
+      "subtitle": "The correct answer is: He lives in Barcelona and works in London.",
+      "translation": "正解は、彼はバルセロナに住んでいて、ロンドンで働いている、です。"
+    },
+    {
+      "start": 67.41710416666668,
+      "end": 80.26436458333335,
+      "subtitle": "What does Matt say about flats in London?",
+      "translation": "マットはロンドンのアパートについて何と言っていますか？"
+    },
+    {
+      "start": 80.26436458333335,
+      "end": 83.05079166666668,
+      "subtitle": "He says they are very expensive.",
+      "translation": "彼は、それらはとても高いと言っています。"
+    },
+    {
+      "start": 83.05079166666668,
+      "end": 95.94448958333335,
+      "subtitle": "What does Matt say about flats in Barcelona?",
+      "translation": "マットはバルセロナのアパートについて何と言っていますか？"
+    },
+    {
+      "start": 95.94448958333335,
+      "end": 100.00800000000001,
+      "subtitle": "He says they aren't very expensive and they're nice and big.",
+      "translation": "彼は、それらはあまり高くなく、素敵で広いと言っています。"
+    },
+    {
+      "start": 100.00800000000001,
+      "end": 103.94380208333334,
+      "subtitle": "Pablo and Alicia Moreno are married and live in New York.",
+      "translation": "パブロとアリシア・モレノは結婚しており、ニューヨークに住んでいます。"
+    },
+    {
+      "start": 103.94380208333334,
+      "end": 109.49339583333334,
+      "subtitle": "Pablo is from Spain, and Alicia is from Buenos Aires, Argentina.",
+      "translation": "パブロはスペイン出身で、アリシアはアルゼンチンのブエノスアイレス出身です。"
+    },
+    {
+      "start": 109.49339583333334,
+      "end": 112.25659375000001,
+      "subtitle": "Their family is very international!",
+      "translation": "彼らの家族はとても国際的です！"
+    },
+    {
+      "start": 112.25659375000001,
+      "end": 118.71177083333335,
+      "subtitle": "Alicia's sister, Daniela, is 46 and lives in Buenos Aires with their mother.",
+      "translation": "アリシアの妹ダニエラは46歳で、母親と一緒にブエノスアイレスに住んでいます。"
+    },
+    {
+      "start": 118.71177083333335,
+      "end": 125.36694791666667,
+      "subtitle": "Her brother, Carlos, is 37. He lives and works in São Paulo, Brazil.",
+      "translation": "彼女の兄カルロスは37歳です。彼はブラジルのサンパウロに住み、働いています。"
+    },
+    {
+      "start": 125.36694791666667,
+      "end": 132.27491666666668,
+      "subtitle": "Alicia and Pablo have two children: Alex, 19, and María, 24.",
+      "translation": "アリシアとパブロには2人の子供がいます。アレックス（19歳）とマリア（24歳）です。"
+    },
+    {
+      "start": 132.27491666666668,
+      "end": 138.4514479166667,
+      "subtitle": "Their son Alex is 19 and studies at university in Mexico, where he also lives.",
+      "translation": "彼らの息子アレックスは19歳で、メキシコの大学で勉強しており、そこに住んでいます。"
+    },
+    {
+      "start": 138.4514479166667,
+      "end": 144.76993750000003,
+      "subtitle": "Their daughter María is 24. She lives in Istanbul with her Turkish husband, Mehmet.",
+      "translation": "彼らの娘マリアは24歳です。彼女はトルコ人の夫メフメトとイスタンブールに住んでいます。"
+    },
+    {
+      "start": 144.76993750000003,
+      "end": 158.68532291666668,
+      "subtitle": "True or False: Pablo and Alicia have two small children.",
+      "translation": "正誤：パブロとアリシアには2人の幼い子供がいます。"
+    },
+    {
+      "start": 158.68532291666668,
+      "end": 163.98212500000002,
+      "subtitle": "False. Their children are 19 and 24, so not small.",
+      "translation": "間違いです。彼らの子供は19歳と24歳なので、幼くありません。"
+    },
+    {
+      "start": 163.98212500000002,
+      "end": 177.75817708333335,
+      "subtitle": "True or False: María is married and lives in Turkey.",
+      "translation": "正誤：マリアは結婚しており、トルコに住んでいます。"
+    },
+    {
+      "start": 177.75817708333335,
+      "end": 183.4265,
+      "subtitle": "True. María is married to Mehmet and lives in Istanbul, Turkey.",
+      "translation": "正しいです。マリアはメフメトと結婚しており、トルコのイスタンブールに住んでいます。"
+    },
+    {
+      "start": 183.4265,
+      "end": 197.74823958333334,
+      "subtitle": "True or False: Only Pablo and Alicia live in Mexico.",
+      "translation": "正誤：パブロとアリシアだけがメキシコに住んでいます。"
+    },
+    {
+      "start": 197.74823958333334,
+      "end": 204.33639583333334,
+      "subtitle": "False. Their son Alex lives in Mexico. Pablo and Alicia live in New York.",
+      "translation": "間違いです。彼らの息子アレックスがメキシコに住んでいます。パブロとアリシアはニューヨークに住んでいます。"
+    },
+    {
+      "start": 204.33639583333334,
+      "end": 216.75409375,
+      "subtitle": "Which country does Daniela live in?",
+      "translation": "ダニエラはどの国に住んでいますか？"
+    },
+    {
+      "start": 216.75409375,
+      "end": 219.65662500000002,
+      "subtitle": "Daniela lives in Argentina.",
+      "translation": "ダニエラはアルゼンチンに住んでいます。"
+    },
+    {
+      "start": 219.65662500000002,
+      "end": 231.84211458333334,
+      "subtitle": "Which country does Carlos live in?",
+      "translation": "カルロスはどの国に住んでいますか？"
+    },
+    {
+      "start": 231.84211458333334,
+      "end": 234.29185416666667,
+      "subtitle": "Carlos lives in Brazil.",
+      "translation": "カルロスはブラジルに住んでいます。"
+    },
+    {
+      "start": 234.29185416666667,
+      "end": 246.58184375,
+      "subtitle": "Which country does María live in?",
+      "translation": "マリアはどの国に住んでいますか？"
+    },
+    {
+      "start": 246.58184375,
+      "end": 249.03158333333332,
+      "subtitle": "María lives in Turkey.",
+      "translation": "マリアはトルコに住んでいます。"
+    },
+    {
+      "start": 249.03158333333332,
+      "end": 256.3859895833333,
+      "subtitle": "Great job! You've completed the reading comprehension exercises. Keep practicing your English!",
+      "translation": "よくできました！リーディング理解の練習を完了しました。英語の練習を続けてください！"
+    }
+  ]
+}

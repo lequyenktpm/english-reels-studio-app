@@ -1,0 +1,227 @@
+{
+  "jobId": "video-mws3o1j2",
+  "duration": 291.0155208333333,
+  "resolution": {
+    "width": 540,
+    "height": 960
+  },
+  "fps": 24,
+  "timeline": [
+    {
+      "start": 0,
+      "end": 4.086739583333333,
+      "subtitle": "Let's read about Matt's unusual daily routine.",
+      "translation": "Hãy cùng đọc về lịch trình hàng ngày khác thường của Matt."
+    },
+    {
+      "start": 4.086739583333333,
+      "end": 13.702458333333333,
+      "subtitle": "I work in London, but flats are expensive there. In Barcelona, they’re nice, big, and not expensive, so I live there!",
+      "translation": "Tôi làm việc ở London, nhưng căn hộ ở đó đắt. Ở Barcelona, chúng đẹp, rộng rãi và không đắt, nên tôi sống ở đó!"
+    },
+    {
+      "start": 13.702458333333333,
+      "end": 23.155635416666666,
+      "subtitle": "I fly to London on Monday, work three days, and stay with my sister. Then I fly back to Barcelona and work at home two days.",
+      "translation": "Tôi bay đến London vào thứ Hai, làm việc ba ngày và ở với chị gái. Sau đó tôi bay về Barcelona và làm việc tại nhà hai ngày."
+    },
+    {
+      "start": 23.155635416666666,
+      "end": 31.540708333333335,
+      "subtitle": "I study Spanish at a language school on Saturday. I love Barcelona – it’s a beautiful city and great to live here!",
+      "translation": "Tôi học tiếng Tây Ban Nha ở trường ngôn ngữ vào thứ Bảy. Tôi yêu Barcelona – đó là một thành phố xinh đẹp và thật tuyệt khi sống ở đây!"
+    },
+    {
+      "start": 31.540708333333335,
+      "end": 40.20067708333333,
+      "subtitle": "Which sentence accurately describes Matt's situation?",
+      "translation": "Câu nào đúng về Matt?"
+    },
+    {
+      "start": 40.20067708333333,
+      "end": 45.07689583333333,
+      "subtitle": "The correct answer is: He lives in Barcelona and works in London.",
+      "translation": "Anh ấy sống ở Barcelona và làm việc ở London."
+    },
+    {
+      "start": 45.07689583333333,
+      "end": 53.945843749999995,
+      "subtitle": "What does Matt say about flats in London and Barcelona?",
+      "translation": "Matt nói gì về căn hộ ở London và Barcelona?"
+    },
+    {
+      "start": 53.945843749999995,
+      "end": 60.784145833333326,
+      "subtitle": "London flats are expensive, while Barcelona flats are nice, big, and not expensive.",
+      "translation": "Căn hộ ở London đắt; căn hộ ở Barcelona đẹp, rộng và không đắt."
+    },
+    {
+      "start": 60.784145833333326,
+      "end": 71.38296874999999,
+      "subtitle": "How many days does Matt work in London and at home, and what about his Spanish studies?",
+      "translation": "Matt làm việc ở London và tại nhà bao nhiêu ngày, và việc học tiếng Tây Ban Nha của anh ấy thì sao?"
+    },
+    {
+      "start": 71.38296874999999,
+      "end": 77.19960416666666,
+      "subtitle": "He works 3 days in London, 2 days at home, and studies Spanish on Saturday.",
+      "translation": "3 ngày ở London, 2 ngày tại nhà. Anh ấy học tiếng Tây Ban Nha vào thứ Bảy."
+    },
+    {
+      "start": 77.19960416666666,
+      "end": 85.70863541666665,
+      "subtitle": "Finally, what does Matt say about Barcelona?",
+      "translation": "Cuối cùng, Matt nói gì về Barcelona?"
+    },
+    {
+      "start": 85.70863541666665,
+      "end": 89.22647916666665,
+      "subtitle": "He says it's a beautiful city and great to live there.",
+      "translation": "Anh ấy nói đó là một thành phố xinh đẹp và thật tuyệt khi sống ở đó."
+    },
+    {
+      "start": 89.22647916666665,
+      "end": 93.38288541666665,
+      "subtitle": "Let's learn about Pablo and Alicia's diverse family.",
+      "translation": "Hãy cùng tìm hiểu về gia đình đa quốc gia của Pablo và Alicia."
+    },
+    {
+      "start": 93.38288541666665,
+      "end": 101.22227083333333,
+      "subtitle": "Pablo from Spain and Alicia from Argentina are married and live in New York. Their family is very international!",
+      "translation": "Pablo (Tây Ban Nha) và Alicia (Argentina) đã kết hôn và sống ở New York. Gia đình họ rất quốc tế!"
+    },
+    {
+      "start": 101.22227083333333,
+      "end": 112.95101041666666,
+      "subtitle": "Alicia's sister Daniela, who is 46, lives in Buenos Aires with their mother. Her brother Carlos, 37, lives and works in São Paulo, Brazil.",
+      "translation": "Chị gái của Alicia, Daniela (46 tuổi), sống ở Buenos Aires với mẹ của họ. Anh trai cô ấy, Carlos (37 tuổi), sống và làm việc ở São Paulo, Brazil."
+    },
+    {
+      "start": 112.95101041666666,
+      "end": 125.99431249999999,
+      "subtitle": "Pablo and Alicia have two children. Their son Alex, 19, is at university in Mexico. Their daughter María, 24, lives in Istanbul with her Turkish husband, Mehmet.",
+      "translation": "Pablo và Alicia có hai con. Con trai họ, Alex (19 tuổi), đang học đại học ở Mexico. Con gái họ, María (24 tuổi), sống ở Istanbul với chồng người Thổ Nhĩ Kỳ, Mehmet."
+    },
+    {
+      "start": 125.99431249999999,
+      "end": 133.92284375,
+      "subtitle": "Are Pablo and Alicia's children small?",
+      "translation": "Đúng hay Sai: Pablo và Alicia có hai con nhỏ."
+    },
+    {
+      "start": 133.92284375,
+      "end": 138.92939583333333,
+      "subtitle": "False. Their children are 19 and 24, not small.",
+      "translation": "Sai. Con của họ 19 và 24 tuổi."
+    },
+    {
+      "start": 138.92939583333333,
+      "end": 150.42482291666667,
+      "subtitle": "Is María married and living in Turkey? And is it true that only Pablo and Alicia live in Mexico?",
+      "translation": "Đúng hay Sai: María đã kết hôn và sống ở Thổ Nhĩ Kỳ. Và chỉ Pablo và Alicia sống ở Mexico."
+    },
+    {
+      "start": 150.42482291666667,
+      "end": 159.309125,
+      "subtitle": "María is married and lives in Turkey is true. Only Pablo and Alicia in Mexico is false, as Alex lives there too.",
+      "translation": "María: Đúng. Chỉ Pablo & Alicia ở Mexico: Sai (Alex cũng sống ở đó)."
+    },
+    {
+      "start": 159.309125,
+      "end": 170.61615625,
+      "subtitle": "Can you name the countries where Daniela, Carlos, Alex, María, and Mehmet live?",
+      "translation": "Daniela, Carlos, Alex, María và Mehmet sống ở đâu?"
+    },
+    {
+      "start": 170.61615625,
+      "end": 178.1278333333333,
+      "subtitle": "Daniela in Argentina, Carlos in Brazil, Alex in Mexico, and María and Mehmet in Turkey.",
+      "translation": "Daniela: Argentina, Carlos: Brazil, Alex: Mexico, María: Thổ Nhĩ Kỳ, Mehmet: Thổ Nhĩ Kỳ."
+    },
+    {
+      "start": 178.1278333333333,
+      "end": 186.66009375,
+      "subtitle": "What are the ages of Carlos, Alex, and María?",
+      "translation": "Carlos, Alex và María bao nhiêu tuổi?"
+    },
+    {
+      "start": 186.66009375,
+      "end": 191.88460416666666,
+      "subtitle": "Carlos is thirty-seven, Alex is nineteen, and María is twenty-four.",
+      "translation": "Carlos: ba mươi bảy, Alex: mười chín, María: hai mươi bốn."
+    },
+    {
+      "start": 191.88460416666666,
+      "end": 195.89007291666667,
+      "subtitle": "Let's read an email from Maria about her family.",
+      "translation": "Hãy cùng đọc một email từ Maria về gia đình cô ấy."
+    },
+    {
+      "start": 195.89007291666667,
+      "end": 207.0383125,
+      "subtitle": "Hi Eileen, my family is small. Here’s a new photo of us on holiday with my husband, Greg, our daughter, Linda, and our son, Jeff.",
+      "translation": "Chào Eileen, gia đình tôi nhỏ. Đây là một bức ảnh mới của chúng tôi trong kỳ nghỉ cùng chồng, Greg, con gái, Linda, và con trai, Jeff."
+    },
+    {
+      "start": 207.0383125,
+      "end": 214.43390624999998,
+      "subtitle": "My parents, Tom from San Francisco and Elizabetta from Warsaw, Poland, are in the photo, too.",
+      "translation": "Bố mẹ tôi, Tom (từ San Francisco) và Elizabetta (từ Warsaw, Ba Lan), cũng có trong ảnh."
+    },
+    {
+      "start": 214.43390624999998,
+      "end": 221.147125,
+      "subtitle": "Greg and I live in Washington with our children. Greg works in an office and I’m a teacher.",
+      "translation": "Greg và tôi sống ở Washington với các con. Greg làm việc trong văn phòng và tôi là giáo viên."
+    },
+    {
+      "start": 221.147125,
+      "end": 229.03296874999998,
+      "subtitle": "Greg’s parents live in Washington, but my mum and dad are in California. We usually have holidays with them.",
+      "translation": "Bố mẹ Greg sống ở Washington, nhưng bố mẹ tôi ở California. Chúng tôi thường đi nghỉ cùng họ."
+    },
+    {
+      "start": 229.03296874999998,
+      "end": 235.57204166666665,
+      "subtitle": "I have two brothers, Daniel and Jon. Daniel is an English teacher in Mexico City.",
+      "translation": "Tôi có hai anh trai, Daniel và Jon. Daniel là giáo viên tiếng Anh ở Mexico City."
+    },
+    {
+      "start": 235.57204166666665,
+      "end": 244.35184374999997,
+      "subtitle": "Jon lives in Moscow with his Russian wife, Anna, and their five-year-old daughter, Olga. Olga speaks Russian and English well.",
+      "translation": "Jon sống ở Moscow với vợ người Nga, Anna, và con gái năm tuổi của họ, Olga. Olga nói tiếng Nga và tiếng Anh tốt."
+    },
+    {
+      "start": 244.35184374999997,
+      "end": 252.8376458333333,
+      "subtitle": "Can you match these people to their respective locations?",
+      "translation": "Hãy ghép tên người với nơi ở/xuất xứ của họ."
+    },
+    {
+      "start": 252.8376458333333,
+      "end": 264.3779895833333,
+      "subtitle": "Daniel in Mexico City, Eileen in Edinburgh, Elizabetta from Warsaw, Greg and Maria in Washington, Jon in Moscow, and Tom from San Francisco.",
+      "translation": "Daniel: Mexico City, Eileen: Edinburgh, Elizabetta: Warsaw, Greg & Maria: Washington, Jon: Moscow, Tom: San Francisco."
+    },
+    {
+      "start": 264.3779895833333,
+      "end": 274.03641666666664,
+      "subtitle": "Who are Maria's immediate family members, and Jon's wife and daughter?",
+      "translation": "Ai là thành viên gia đình trực hệ của Maria, và vợ con của Jon?"
+    },
+    {
+      "start": 274.03641666666664,
+      "end": 283.8611145833333,
+      "subtitle": "Maria's parents are Tom and Elizabetta, husband Greg, children Linda and Jeff. Jon's wife is Anna, and daughter is Olga.",
+      "translation": "Gia đình Maria: Bố mẹ: Tom & Elizabetta, Chồng: Greg, Con: Linda & Jeff. Gia đình Jon: Vợ: Anna, Con gái: Olga."
+    },
+    {
+      "start": 283.8611145833333,
+      "end": 291.0155208333333,
+      "subtitle": "You've done a great job learning about these families. Keep practicing your English reading skills!",
+      "translation": "Bạn đã làm rất tốt khi tìm hiểu về những gia đình này! Hãy tiếp tục luyện đọc tiếng Anh nhé!"
+    }
+  ]
+}

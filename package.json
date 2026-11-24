@@ -1,0 +1,15 @@
+{
+  "name": "english-reels-studio",
+  "version": "1.1.0",
+  "description": "Dán link hoặc text bài học, bóc nội dung có kiểm tra giữ đủ câu, đọc TTS ElevenLabs/Piper, karaoke theo từng từ và xuất MP4 + SRT",
+  "main": "app/server.js",
+  "scripts": {
+    "start": "node app/server.js"
+  },
+  "dependencies": {
+    "@napi-rs/canvas": "^0.1.65",
+    "cheerio": "^1.0.0",
+    "express": "^4.21.2",
+    "ffmpeg-static": "^5.2.0"
+  }
+}

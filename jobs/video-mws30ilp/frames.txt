@@ -1,0 +1,15 @@
+file 'C:/Users/NgoetTy/Downloads/english-reels-studio-app/jobs/video-mws30ilp/f_0.png'
+duration 1.776365
+file 'C:/Users/NgoetTy/Downloads/english-reels-studio-app/jobs/video-mws30ilp/f_1.png'
+duration 5.464615
+file 'C:/Users/NgoetTy/Downloads/english-reels-studio-app/jobs/video-mws30ilp/f_2.png'
+duration 3.181156
+file 'C:/Users/NgoetTy/Downloads/english-reels-studio-app/jobs/video-mws30ilp/f_3.png'
+duration 5.287823
+file 'C:/Users/NgoetTy/Downloads/english-reels-studio-app/jobs/video-mws30ilp/f_4.png'
+duration 3.079302
+file 'C:/Users/NgoetTy/Downloads/english-reels-studio-app/jobs/video-mws30ilp/f_5.png'
+duration 2.893552
+file 'C:/Users/NgoetTy/Downloads/english-reels-studio-app/jobs/video-mws30ilp/f_6.png'
+duration 4.240302
+file 'C:/Users/NgoetTy/Downloads/english-reels-studio-app/jobs/video-mws30ilp/f_6.png'

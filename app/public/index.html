@@ -1,0 +1,1304 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>English Reels Studio — Dán nội dung → Ra Video</title>
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --border: #e2e8f0;
+      --text: #0f172a;
+      --muted: #64748b;
+      --primary: #4f46e5;
+      --primary-hover: #4338ca;
+      --success: #059669;
+      --danger: #dc2626;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    header span.tag {
+      font-size: 11px;
+      background: #eef2ff;
+      color: var(--primary);
+      padding: 3px 8px;
+      border-radius: 999px;
+      font-weight: 700;
+    }
+    .container {
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: 420px 1fr 340px;
+      gap: 20px;
+      align-items: start;
+    }
+    @media (max-width: 1120px) {
+      .container { grid-template-columns: 1fr; }
+    }
+    .panel {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px;
+      box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+    }
+    .panel h2 {
+      margin: 0 0 12px;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--muted);
+    }
+    label {
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 5px;
+      color: #334155;
+    }
+    input[type="text"], input[type="url"], input[type="number"], select, textarea {
+      width: 100%;
+      padding: 9px 11px;
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      font-size: 13px;
+      font-family: inherit;
+      background: #fff;
+      color: var(--text);
+    }
+    textarea { resize: vertical; min-height: 150px; }
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.12);
+    }
+    .row { display: flex; gap: 8px; align-items: center; }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; }
+    .mt-2 { margin-top: 8px; }
+    .mt-3 { margin-top: 12px; }
+    .mt-4 { margin-top: 16px; }
+    button {
+      cursor: pointer;
+      border: 1px solid transparent;
+      border-radius: 9px;
+      padding: 9px 14px;
+      font-size: 13px;
+      font-weight: 600;
+      font-family: inherit;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      transition: 0.15s;
+    }
+    button:disabled { opacity: 0.5; cursor: not-allowed; }
+    .btn-primary { background: var(--primary); color: #fff; }
+    .btn-primary:hover:not(:disabled) { background: var(--primary-hover); }
+    .btn-secondary { background: #f1f5f9; color: #1e293b; border-color: #e2e8f0; }
+    .btn-secondary:hover:not(:disabled) { background: #e2e8f0; }
+    .btn-success { background: var(--success); color: #fff; }
+    .btn-danger { background: #fef2f2; color: var(--danger); border-color: #fecaca; }
+    .btn-sm { padding: 5px 9px; font-size: 12px; border-radius: 7px; }
+    .alert {
+      padding: 10px 12px;
+      border-radius: 10px;
+      font-size: 12.5px;
+      margin-top: 10px;
+    }
+    .alert-warn { background: #fffbeb; border: 1px solid #fde68a; color: #92400e; }
+    .alert-err { background: #fef2f2; border: 1px solid #fecaca; color: #991b1b; }
+    .alert-ok { background: #ecfdf5; border: 1px solid #a7f3d0; color: #065f46; }
+    .link-list {
+      max-height: 210px;
+      overflow-y: auto;
+      margin-top: 8px;
+      border: 1px solid #fde68a;
+      border-radius: 8px;
+      background: #fff;
+    }
+    .link-item {
+      padding: 7px 10px;
+      border-bottom: 1px solid #fef3c7;
+      font-size: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+    }
+    .link-item:last-child { border-bottom: none; }
+    .card-item {
+      border: 1.5px solid var(--border);
+      border-radius: 12px;
+      padding: 12px;
+      margin-bottom: 10px;
+      background: #fff;
+      transition: 0.15s;
+    }
+    .card-item.active {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+    }
+    .card-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+    .preview-box {
+      position: sticky;
+      top: 76px;
+    }
+    .phone-frame {
+      width: 100%;
+      aspect-ratio: 9 / 16;
+      background: #0f172a;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 3px solid #1e293b;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .phone-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+    .progress-wrap {
+      margin-top: 12px;
+      background: #e2e8f0;
+      border-radius: 999px;
+      height: 10px;
+      overflow: hidden;
+    }
+    .progress-bar {
+      height: 100%;
+      background: var(--primary);
+      width: 0%;
+      transition: width 0.25s;
+    }
+    video {
+      width: 100%;
+      border-radius: 12px;
+      margin-top: 10px;
+      background: #000;
+    }
+    .karaoke-box {
+      margin-top: 9px;
+      padding: 10px 12px;
+      min-height: 72px;
+      border-radius: 10px;
+      background: #0f172a;
+      color: #cbd5e1;
+      overflow-wrap: anywhere;
+    }
+    .karaoke-caption { font-size: 10px; font-weight: 800; letter-spacing: .12em; color: #94a3b8; margin-bottom: 5px; }
+    .karaoke-line { font-size: 16px; font-weight: 700; line-height: 1.6; }
+    .karaoke-word { color: #94a3b8; transition: color .08s, background .08s; border-radius: 4px; padding: 0 1px; }
+    .karaoke-word.done { color: #f8fafc; }
+    .karaoke-word.active { color: #111827; background: #facc15; box-shadow: 0 0 0 2px #facc15; }
+    .playback-notice { margin-top: 7px; font-size: 11px; color: #475569; min-height: 16px; }
+    .voice-tools { display:flex; gap:7px; margin-top:6px; }
+    .voice-tools button { white-space:nowrap; }
+    .voice-tools select { flex:1; min-width:0; }
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>English Reels Studio <span class="tag">Web App · Dán nội dung → Ra Video</span></h1>
+    <div class="row">
+      <button type="button" class="btn-secondary btn-sm" id="btnLoadSample">Nạp ví dụ mẫu</button>
+      <button type="button" class="btn-primary" id="btnRenderTop">🎬 Tạo video</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- CỘT 1: LẤY NỘI DUNG & CẤU HÌNH XUẤT -->
+    <section class="panel">
+      <h2>1. Lấy hoặc dán nội dung</h2>
+
+      <label for="urlInput">Dán link bài học (ví dụ bài đọc trên english-practice.net)</label>
+      <div class="row">
+        <input type="url" id="urlInput" placeholder="https://english-practice.net/practice-reading-..." />
+        <button type="button" class="btn-primary" id="btnFetchUrl" style="white-space:nowrap;">Lấy nội dung</button>
+      </div>
+
+      <div id="urlNotice"></div>
+
+      
+      <div class="mt-3" style="padding:10px;border:1px solid var(--border);border-radius:10px;background:#f8fafc;">
+        <div class="row" style="justify-content:space-between;">
+          <label style="margin:0;display:inline-flex;align-items:center;gap:6px;cursor:pointer;">
+            <input type="checkbox" id="useAiCheck" checked />
+            <span>Dùng Gemini AI tách thẻ thông minh</span>
+          </label>
+          <select id="transLangSelect" style="width:auto;padding:3px 8px;font-size:12px;">
+            <option value="Vietnamese" selected>Dịch sang Tiếng Việt</option>
+            <option value="Japanese">Dịch sang Tiếng Nhật</option>
+          </select>
+        </div>
+        
+        <div class="mt-2">
+          <label for="elevenKeyInput">ElevenLabs API Key (khi chọn giọng ElevenLabs)</label>
+          <input type="password" id="elevenKeyInput" placeholder="xi_... (lưu tạm trong trình duyệt)" />
+          <div class="voice-tools">
+            <button type="button" class="btn-secondary btn-sm" id="btnLoadElevenVoices">Kiểm tra key & tải giọng</button>
+            <span id="elevenVoiceStatus" style="font-size:11px;color:var(--muted);align-self:center;"></span>
+          </div>
+          <div style="font-size:11px;color:var(--muted);margin-top:4px;">Chọn giọng trả về từ chính tài khoản của A để tránh lỗi Voice ID không có quyền truy cập.</div>
+        </div>
+
+        <div class="mt-2">
+          <label for="geminiKeyInput">Gemini API Key (lưu tạm trong trình duyệt)</label>
+          <input type="password" id="geminiKeyInput" placeholder="AIzaSy... (bỏ trống sẽ dùng luật dự phòng)" />
+        </div>
+      </div>
+
+      <div class="grid-2 mt-3">
+        <div>
+          <label for="modeSelect">Kiểu nội dung</label>
+          <select id="modeSelect">
+            <option value="auto">Tự nhận diện (Auto)</option>
+            <option value="quiz">Bài đọc + Câu hỏi Đúng/Sai</option>
+            <option value="vocab">Từ vựng (Từ — Nghĩa)</option>
+            <option value="reading">Đoạn văn đọc hiểu</option>
+          </select>
+        </div>
+        <div>
+          <label for="voiceSelect">Giọng đọc</label>
+          <select id="voiceSelect">
+            <option value="lessac">Piper · Lessac (Nữ Mỹ · Rõ)</option>
+            <option value="ryan">Piper · Ryan (Nam Mỹ · Trầm)</option>
+            <option value="elevenlabs-unloaded" disabled>ElevenLabs · Nhập key rồi tải danh sách giọng bên trên</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="mt-3">
+        <label for="rawTextInput">Hoặc dán / sửa trực tiếp nội dung thô tại đây</label>
+        <textarea id="rawTextInput" placeholder="Dán đoạn văn tiếng Anh, danh sách từ vựng (từ — nghĩa), hoặc bài đọc kèm câu hỏi & đáp án..."></textarea>
+        <div class="row mt-2">
+          <button type="button" class="btn-secondary" id="btnParseText" style="flex:1;">Phân tích text → Tạo thẻ</button>
+        </div>
+      </div>
+
+      <hr style="border:none;border-top:1px solid var(--border);margin:16px 0;" />
+
+      <h2>Cấu hình video (Mặc định nhẹ & mượt)</h2>
+      
+      <div class="mt-3">
+        <label for="speechRateSelect">Tốc độ đọc (Mặc định 0.8x)</label>
+        <select id="speechRateSelect">
+          <option value="0.7">0.7x (Chậm)</option>
+          <option value="0.8" selected>0.8x (Mặc định)</option>
+          <option value="0.9">0.9x</option>
+          <option value="1.0">1.0x (Bình thường)</option>
+          <option value="1.15">1.15x (Nhanh)</option>
+        </select>
+      </div>
+
+      <div class="grid-3">
+        <div>
+          <label for="resSelect">Độ phân giải</label>
+          <select id="resSelect">
+            <option value="540p" selected>540p (Nhẹ)</option>
+            <option value="720p">720p (HD)</option>
+            <option value="1080p">1080p (Full HD)</option>
+          </select>
+        </div>
+        <div>
+          <label for="qualSelect">Chất lượng</label>
+          <select id="qualSelect">
+            <option value="low" selected>Thấp (Nhanh)</option>
+            <option value="medium">Vừa</option>
+            <option value="high">Cao</option>
+          </select>
+        </div>
+        <div>
+          <label for="fpsSelect">Khung hình</label>
+          <select id="fpsSelect">
+            <option value="24" selected>24 fps</option>
+            <option value="30">30 fps</option>
+            <option value="60">60 fps</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="mt-2">
+        <label style="display:inline-flex;align-items:center;gap:6px;cursor:pointer;">
+          <input type="checkbox" id="karaokeCheck" checked />
+          <span>Hiện karaoke tô sáng từng từ trong video (mặc định bật)</span>
+        </label>
+      </div>
+
+      <div class="grid-2 mt-3">
+        <div>
+          <label for="paletteSelect">Màu giao diện</label>
+          <select id="paletteSelect">
+            <option value="midnight">Midnight Dark</option>
+            <option value="emerald">Emerald Deep</option>
+            <option value="royal">Royal Purple</option>
+          </select>
+        </div>
+        <div>
+          <label for="badgeInput">Nhãn góc trên</label>
+          <input type="text" id="badgeInput" value="ENGLISH PRACTICE" />
+        </div>
+      </div>
+
+      <div class="mt-2">
+        <label style="display:inline-flex;align-items:center;gap:6px;cursor:pointer;">
+          <input type="checkbox" id="showTransCheck" checked />
+          <span>Hiện dòng bản dịch (nếu có điền) lên khung hình video</span>
+        </label>
+      </div>
+    </section>
+
+    <!-- CỘT 2: DANH SÁCH THẺ CHỈNH SỬA -->
+    <section class="panel">
+      <div class="row" style="justify-content:space-between;margin-bottom:10px;">
+        <h2 style="margin:0;">2. Chỉnh sửa từng thẻ (<span id="cardCount">0</span> thẻ)</h2>
+        <button type="button" class="btn-secondary btn-sm" id="btnAddCard">+ Thêm thẻ</button>
+      </div>
+      <div id="cardsContainer"></div>
+    </section>
+
+    <!-- CỘT 3: XEM TRƯỚC & XUẤT VIDEO -->
+    <aside class="panel preview-box">
+      <h2>3. Xem trước & Xuất MP4</h2>
+      <div class="phone-frame">
+        <img id="previewImg" alt="Xem trước thẻ" />
+      </div>
+      <div class="row mt-2" style="justify-content:space-between;">
+        <span id="previewCaption" style="font-size:12px;color:var(--muted);">Thẻ 1</span>
+        <button type="button" class="btn-secondary btn-sm" id="btnListenSelected">♪ Nghe thẻ này</button>
+      </div>
+
+      <audio id="audioPlayer" controls style="width:100%;margin-top:8px;height:36px;display:none;"></audio>
+      <div class="karaoke-box" id="karaokeBox">
+        <div class="karaoke-caption">LIVE KARAOKE</div>
+        <div class="karaoke-line" id="karaokeLine">Chọn “Nghe thẻ này” để chạy karaoke theo audio.</div>
+      </div>
+      <div class="playback-notice" id="playbackNotice" aria-live="polite"></div>
+
+      <button type="button" class="btn-primary mt-3" id="btnRenderMain" style="width:100%;padding:11px;">
+        🎬 Tạo video MP4 + SRT
+      </button>
+
+      <div id="renderStatusBox" style="display:none;">
+        <div class="progress-wrap">
+          <div class="progress-bar" id="renderProgressBar"></div>
+        </div>
+        <div id="renderStageText" style="font-size:12px;color:var(--muted);margin-top:6px;">Đang chuẩn bị...</div>
+      </div>
+
+      <div id="renderResultBox"></div>
+    </aside>
+  </main>
+
+  <script>
+    let cards = [];
+    let selectedIndex = 0;
+    let previewTimer = null;
+    let audioRequestId = 0;
+    let karaokeState = { words: [], timings: [], text: '' };
+
+    const $ = (id) => document.getElementById(id);
+
+    function escapeHtml(str) {
+      return String(str || '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+
+    function cardTypeLabel(card) {
+      const labels = { title: 'tiêu đề bài học', reading: 'đoạn đọc', vocab: 'từ vựng', question: 'câu hỏi', answer: 'phần đáp án', outro: 'phần kết' };
+      return labels[card?.type] || 'thẻ nội dung';
+    }
+
+    function composeCardSpeech(cardList, idx) {
+      const card = cardList[idx];
+      if (!card) return '';
+      let speech = (card.speech || card.body || card.question || card.title || '').trim();
+      const previous = idx > 0 ? cardList[idx - 1] : null;
+      if (!speech || !previous) return speech;
+
+      if (card.type === 'reading') {
+        if (previous.type === 'title') return `Let's begin reading. ${speech}`;
+        if (previous.type === 'reading') return `Let's continue with the next part. ${speech}`;
+        return `Now, let's move on to the next reading passage. ${speech}`;
+      }
+      if (card.type === 'question') {
+        const number = (card.indexLabel || '').match(/\d+/)?.[0] || String(idx);
+        speech = speech.replace(/^question\s+\d+[.:]?\s*/i, '');
+        return `Now, let's move on to question ${number}. ${speech}`.trim();
+      }
+      if (card.type === 'answer') return `Let's check the answer. ${speech}`;
+      if (card.type === 'vocab' && previous.type === 'vocab') return `Next, let's learn another word. ${speech}`;
+      return speech;
+    }
+
+    function estimateKaraokeTimings(text, duration) {
+      const words = String(text || '').match(/\S+/g) || [];
+      if (!words.length || !Number.isFinite(duration) || duration <= 0) return [];
+      const weights = words.map((word) => {
+        const letters = Math.max(1, word.replace(/[^a-z0-9]/gi, '').length);
+        const punctuation = /[.!?]$/.test(word) ? 1.65 : /[,;:]$/.test(word) ? 1.3 : 1;
+        return letters * punctuation;
+      });
+      const total = weights.reduce((a, b) => a + b, 0) || 1;
+      let cursor = 0;
+      return weights.map((weight) => {
+        const start = cursor;
+        cursor += duration * weight / total;
+        return { start, end: cursor };
+      });
+    }
+
+    function setKaraokeText(text, timings) {
+      const words = String(text || '').match(/\S+/g) || [];
+      karaokeState = { words, timings: Array.isArray(timings) ? timings : [], text: String(text || '') };
+      $('karaokeLine').innerHTML = words.map((word, index) =>
+        `<span class="karaoke-word" data-word-index="${index}">${escapeHtml(word)}</span>`
+      ).join(' ');
+      if (!words.length) $('karaokeLine').textContent = 'Không có lời đọc để hiển thị.';
+    }
+
+    function updateKaraoke(time) {
+      const spans = $('karaokeLine')?.querySelectorAll('.karaoke-word');
+      if (!spans?.length) return;
+      let active = -1;
+      for (let i = 0; i < karaokeState.timings.length; i++) {
+        const t = karaokeState.timings[i];
+        if (time >= t.start && time <= t.end + 0.015) { active = i; break; }
+      }
+      spans.forEach((span, index) => {
+        span.classList.toggle('done', index < active || (active < 0 && karaokeState.timings[index] && time > karaokeState.timings[index].end));
+        span.classList.toggle('active', index === active);
+      });
+    }
+
+    function stopPreviewAudio(message = '') {
+      audioRequestId++;
+      const player = $('audioPlayer');
+      if (player) {
+        player.pause();
+        player.removeAttribute('src');
+        player.load();
+      }
+      if (message) {
+        $('karaokeLine').textContent = message;
+      }
+    }
+
+    function notifyCardChange(idx, previousIndex) {
+      const card = cards[idx];
+      if (!card) return;
+      const changedType = previousIndex >= 0 && cards[previousIndex] && cards[previousIndex].type !== card.type;
+      const detail = card.indexLabel ? ` · ${card.indexLabel}` : '';
+      $('playbackNotice').textContent = changedType
+        ? `Đã chuyển từ ${cardTypeLabel(cards[previousIndex])} sang ${cardTypeLabel(card)}${detail}.`
+        : `Đang chọn ${cardTypeLabel(card)}${detail}.`;
+    }
+
+    function decodeKaraokeHeader(value) {
+      if (!value) return null;
+      try {
+        const parsed = JSON.parse(atob(value));
+        if (!Array.isArray(parsed)) return null;
+        return parsed.map((item) => ({ start: Number(item[0]), end: Number(item[1]) }));
+      } catch (_) { return null; }
+    }
+
+    async function refreshPreviewImage() {
+      if (!cards.length) return;
+      if (selectedIndex >= cards.length) selectedIndex = cards.length - 1;
+      if (selectedIndex < 0) selectedIndex = 0;
+
+      const card = cards[selectedIndex];
+      $('previewCaption').textContent = `Đang xem: Thẻ ${selectedIndex + 1} / ${cards.length} (${card.type})`;
+
+      try {
+        const res = await fetch('/api/preview-card', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            card,
+            index: selectedIndex,
+            total: cards.length,
+            palette: $('paletteSelect').value,
+            badge: $('badgeInput').value,
+            showTranslation: $('showTransCheck').checked,
+          }),
+        });
+        if (!res.ok) return;
+        const blob = await res.blob();
+        const url = URL.createObjectURL(blob);
+        $('previewImg').src = url;
+      } catch (_) {}
+    }
+
+    function schedulePreview() {
+      clearTimeout(previewTimer);
+      previewTimer = setTimeout(refreshPreviewImage, 180);
+    }
+
+    async function playCardAudio(idx) {
+      const card = cards[idx];
+      if (!card) return;
+      const text = composeCardSpeech(cards, idx);
+      if (!text) return;
+
+      const requestId = ++audioRequestId;
+      const player = $('audioPlayer');
+      player.pause();
+      player.removeAttribute('src');
+      player.load();
+      player.style.display = 'block';
+      $('playbackNotice').textContent = `Đang tạo audio cho ${cardTypeLabel(card)}...`;
+      $('karaokeLine').textContent = 'Đang tạo lời đọc và căn thời gian karaoke...';
+      try {
+        const res = await fetch('/api/preview-audio', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ text, voice: $('voiceSelect').value, speechRate: Number($('speechRateSelect')?.value || 0.8), elevenlabsApiKey: $('elevenKeyInput') ? $('elevenKeyInput').value.trim() : '' }),
+        });
+        if (requestId !== audioRequestId) return;
+        if (!res.ok) {
+          const err = await res.json().catch(() => ({}));
+          throw new Error(err.error || 'Không tạo được audio.');
+        }
+        const blob = await res.blob();
+        if (requestId !== audioRequestId) return;
+        const url = URL.createObjectURL(blob);
+        player.src = url;
+        const tokens = text.match(/\S+/g) || [];
+        let timings = decodeKaraokeHeader(res.headers.get('X-Karaoke-Timings'));
+        if (!timings || timings.length !== tokens.length) timings = [];
+        setKaraokeText(text, timings);
+        player.onloadedmetadata = () => {
+          if (requestId !== audioRequestId) return;
+          if (karaokeState.timings.length !== karaokeState.words.length) {
+            karaokeState.timings = estimateKaraokeTimings(text, player.duration);
+          }
+          updateKaraoke(player.currentTime || 0);
+        };
+        player.ontimeupdate = () => updateKaraoke(player.currentTime || 0);
+        player.onseeked = () => updateKaraoke(player.currentTime || 0);
+        player.onended = () => {
+          updateKaraoke(player.duration || 0);
+          $('playbackNotice').textContent = `Đã đọc xong ${cardTypeLabel(card)}.`;
+        };
+        await player.play();
+        $('playbackNotice').textContent = `Đang đọc ${cardTypeLabel(card)}${card.indexLabel ? ` · ${card.indexLabel}` : ''}. Karaoke chạy theo audio.`;
+      } catch (e) {
+        if (requestId === audioRequestId) {
+          $('playbackNotice').textContent = 'Không thể phát audio.';
+          $('karaokeLine').textContent = 'Karaoke chưa thể chạy vì audio chưa phát được.';
+          alert('Lỗi phát âm thanh: ' + e.message);
+        }
+      }
+    }
+
+    function renderCardsList() {
+      $('cardCount').textContent = cards.length;
+      const container = $('cardsContainer');
+      if (!cards.length) {
+        container.innerHTML = '<div class="alert alert-warn">Chưa có thẻ nào. Hãy dán link bài học hoặc bấm "Nạp ví dụ mẫu".</div>';
+        return;
+      }
+
+      container.innerHTML = cards
+        .map((c, idx) => {
+          const activeClass = idx === selectedIndex ? 'active' : '';
+          let fieldsHtml = '';
+
+          if (c.type === 'title' || c.type === 'outro') {
+            fieldsHtml = `
+              <div class="grid-2">
+                <div>
+                  <label>Tiêu đề chính</label>
+                  <input type="text" data-idx="${idx}" data-field="title" value="${escapeHtml(c.title)}" />
+                </div>
+                <div>
+                  <label>Phụ đề nhỏ</label>
+                  <input type="text" data-idx="${idx}" data-field="subtitle" value="${escapeHtml(c.subtitle)}" />
+                </div>
+              </div>`;
+          } else if (c.type === 'vocab') {
+            fieldsHtml = `
+              <div class="grid-2">
+                <div>
+                  <label>Từ vựng</label>
+                  <input type="text" data-idx="${idx}" data-field="word" value="${escapeHtml(c.word)}" />
+                </div>
+                <div>
+                  <label>Nghĩa</label>
+                  <input type="text" data-idx="${idx}" data-field="meaning" value="${escapeHtml(c.meaning)}" />
+                </div>
+              </div>
+              <div class="mt-2">
+                <label>Câu ví dụ</label>
+                <input type="text" data-idx="${idx}" data-field="example" value="${escapeHtml(c.example)}" />
+              </div>`;
+          } else if (c.type === 'question' || c.type === 'answer') {
+            fieldsHtml = `
+              <div>
+                <label>Câu hỏi</label>
+                <input type="text" data-idx="${idx}" data-field="question" value="${escapeHtml(c.question)}" />
+              </div>
+              <div class="grid-2 mt-2">
+                <div>
+                  <label>${c.type === 'answer' ? 'Đáp án' : 'Đếm ngược (giây)'}</label>
+                  ${
+                    c.type === 'answer'
+                      ? `<input type="text" data-idx="${idx}" data-field="answer" value="${escapeHtml(c.answer)}" />`
+                      : `<input type="number" min="1" max="10" data-idx="${idx}" data-field="countdown" value="${Number(c.countdown ?? 5)}" />`
+                  }
+                </div>
+                <div>
+                  <label>Nhãn thẻ</label>
+                  <input type="text" data-idx="${idx}" data-field="indexLabel" value="${escapeHtml(c.indexLabel)}" />
+                </div>
+              </div>`;
+          } else {
+            fieldsHtml = `
+              <div>
+                <label>Đoạn văn hiển thị trên màn hình</label>
+                <textarea style="min-height:74px;" data-idx="${idx}" data-field="body">${escapeHtml(c.body)}</textarea>
+              </div>`;
+          }
+
+          return `
+            <div class="card-item ${activeClass}" data-select-card="${idx}">
+              <div class="card-head">
+                <div class="row">
+                  <strong style="font-size:12px;">#${idx + 1}</strong>
+                  <select data-idx="${idx}" data-field="type" style="width:auto;padding:4px 8px;font-size:12px;">
+                    <option value="title" ${c.type === 'title' ? 'selected' : ''}>Tiêu đề (Title)</option>
+                    <option value="reading" ${c.type === 'reading' ? 'selected' : ''}>Đoạn đọc (Reading)</option>
+                    <option value="vocab" ${c.type === 'vocab' ? 'selected' : ''}>Từ vựng (Vocab)</option>
+                    <option value="question" ${c.type === 'question' ? 'selected' : ''}>Câu hỏi (Question)</option>
+                    <option value="answer" ${c.type === 'answer' ? 'selected' : ''}>Đáp án (Answer)</option>
+                    <option value="outro" ${c.type === 'outro' ? 'selected' : ''}>Kết thúc (Outro)</option>
+                  </select>
+                </div>
+                <div class="row">
+                  <button type="button" class="btn-secondary btn-sm" data-action="listen" data-idx="${idx}">♪ Nghe</button>
+                  <button type="button" class="btn-secondary btn-sm" data-action="up" data-idx="${idx}">↑</button>
+                  <button type="button" class="btn-secondary btn-sm" data-action="down" data-idx="${idx}">↓</button>
+                  <button type="button" class="btn-secondary btn-sm" data-action="dup" data-idx="${idx}">Nhân bản</button>
+                  <button type="button" class="btn-danger btn-sm" data-action="del" data-idx="${idx}">Xoá</button>
+                </div>
+              </div>
+
+              ${fieldsHtml}
+
+              <div class="grid-2 mt-2">
+                <div>
+                  <label>Lời đọc TTS (Speech)</label>
+                  <input type="text" data-idx="${idx}" data-field="speech" value="${escapeHtml(c.speech)}" />
+                </div>
+                <div>
+                  <label>Bản dịch (Tùy chọn)</label>
+                  <input type="text" data-idx="${idx}" data-field="translation" placeholder="Điền tiếng Việt/Nhật nếu muốn..." value="${escapeHtml(c.translation)}" />
+                </div>
+              </div>
+            </div>
+          `;
+        })
+        .join('');
+    }
+
+    $('cardsContainer').addEventListener('click', (e) => {
+      const btn = e.target.closest('button[data-action]');
+      if (btn) {
+        const idx = Number(btn.dataset.idx);
+        const action = btn.dataset.action;
+        if (action === 'listen') {
+          const oldIndex = selectedIndex;
+          selectedIndex = idx;
+          notifyCardChange(idx, oldIndex);
+          renderCardsList();
+          refreshPreviewImage();
+          playCardAudio(idx);
+        } else if (action === 'up' && idx > 0) {
+          [cards[idx - 1], cards[idx]] = [cards[idx], cards[idx - 1]];
+          selectedIndex = idx - 1;
+          renderCardsList();
+          refreshPreviewImage();
+        } else if (action === 'down' && idx < cards.length - 1) {
+          [cards[idx + 1], cards[idx]] = [cards[idx], cards[idx + 1]];
+          selectedIndex = idx + 1;
+          renderCardsList();
+          refreshPreviewImage();
+        } else if (action === 'dup') {
+          const copy = JSON.parse(JSON.stringify(cards[idx]));
+          cards.splice(idx + 1, 0, copy);
+          selectedIndex = idx + 1;
+          renderCardsList();
+          refreshPreviewImage();
+        } else if (action === 'del') {
+          cards.splice(idx, 1);
+          if (selectedIndex >= cards.length) selectedIndex = Math.max(0, cards.length - 1);
+          renderCardsList();
+          refreshPreviewImage();
+        }
+        return;
+      }
+
+      const cardEl = e.target.closest('[data-select-card]');
+      if (cardEl) {
+        const idx = Number(cardEl.dataset.selectCard);
+        if (idx !== selectedIndex) {
+          const oldIndex = selectedIndex;
+          stopPreviewAudio('Chọn “Nghe thẻ này” để phát và chạy karaoke.');
+          selectedIndex = idx;
+          notifyCardChange(idx, oldIndex);
+          renderCardsList();
+          refreshPreviewImage();
+        }
+      }
+    });
+
+    $('cardsContainer').addEventListener('input', (e) => {
+      const el = e.target;
+      if (!el.dataset || el.dataset.idx === undefined) return;
+      const idx = Number(el.dataset.idx);
+      const field = el.dataset.field;
+      if (!cards[idx]) return;
+
+      cards[idx][field] = el.value;
+      // Tự đồng bộ speech nếu người dùng đang sửa text chính
+      if (field === 'body' || field === 'title') {
+        cards[idx].speech = el.value;
+        const speechInput = el.closest('.card-item')?.querySelector('input[data-field="speech"]');
+        if (speechInput) speechInput.value = el.value;
+      }
+      selectedIndex = idx;
+      schedulePreview();
+    });
+
+    $('cardsContainer').addEventListener('change', (e) => {
+      const el = e.target;
+      if (el.dataset?.field === 'type') {
+        const idx = Number(el.dataset.idx);
+        cards[idx].type = el.value;
+        renderCardsList();
+        refreshPreviewImage();
+      }
+    });
+
+    $('btnAddCard').addEventListener('click', () => {
+      cards.push({
+        id: 'c-' + Date.now(),
+        type: 'reading',
+        indexLabel: 'NEW CARD',
+        body: 'Type your English sentence here.',
+        speech: 'Type your English sentence here.',
+        translation: '',
+      });
+      selectedIndex = cards.length - 1;
+      renderCardsList();
+      refreshPreviewImage();
+    });
+
+    $('btnListenSelected').addEventListener('click', () => playCardAudio(selectedIndex));
+    $('audioPlayer').addEventListener('timeupdate', () => updateKaraoke($('audioPlayer').currentTime || 0));
+    $('audioPlayer').addEventListener('seeked', () => updateKaraoke($('audioPlayer').currentTime || 0));
+    $('paletteSelect').addEventListener('change', refreshPreviewImage);
+    $('badgeInput').addEventListener('input', schedulePreview);
+    $('showTransCheck').addEventListener('change', refreshPreviewImage);
+
+    async function loadSample() {
+      const res = await fetch('/api/sample');
+      const data = await res.json();
+      $('rawTextInput').value = data.rawText || '';
+      stopPreviewAudio('Chọn “Nghe thẻ này” để phát và chạy karaoke.');
+      cards = data.cards || [];
+      selectedIndex = 0;
+      $('urlNotice').innerHTML = '';
+      renderCardsList();
+      refreshPreviewImage();
+    }
+
+    async function fetchFromUrl(targetUrl) {
+      const url = (targetUrl || $('urlInput').value).trim();
+      if (!url) return;
+      $('urlInput').value = url;
+      $('btnFetchUrl').disabled = true;
+      $('urlNotice').innerHTML = '<div class="alert alert-ok">Đang tải và bóc nội dung từ trang web...</div>';
+
+      try {
+        const res = await fetch('/api/extract-url', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ url, mode: $('modeSelect').value, ...getAiPayload() }),
+        });
+        const data = await res.json();
+        if (!res.ok) throw new Error(data.error || 'Lỗi bóc nội dung.');
+
+        if (data.isDirectoryPage && Array.isArray(data.links)) {
+          currentDiscoveredLinks = data.links;
+          const listHtml = data.links
+            .map(
+              (lk, idx) => `
+              <div class="link-item">
+                <label style="margin:0;display:flex;align-items:center;gap:6px;flex:1;min-width:0;cursor:pointer;">
+                  <input type="checkbox" class="batch-link-cb" value="${escapeHtml(lk.url)}" ${idx < 3 ? 'checked' : ''} />
+                  <span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${escapeHtml(lk.title)}</span>
+                </label>
+                <button type="button" class="btn-primary btn-sm" data-pick-url="${escapeHtml(lk.url)}">Bóc bài này</button>
+              </div>`,
+            )
+            .join('');
+          $('urlNotice').innerHTML = `
+            <div class="alert alert-warn">
+              <strong>Phát hiện ${data.links.length} bài tập trên trang!</strong> Tích chọn các bài muốn làm video theo batch hoặc bấm "Bóc bài này":
+              ${data.aiWarning ? `<div style="margin-top:6px;">${escapeHtml(data.aiWarning)}</div>` : ''}
+              <div class="link-list">${listHtml}</div>
+              <div class="row mt-2">
+                <button type="button" class="btn-success btn-sm" id="btnRunBatchLinks" style="flex:1;">🎬 Tạo video Batch các bài đã chọn</button>
+              </div>
+            </div>`;
+          return;
+        }
+
+        
+        if (Array.isArray(data.exercises) && data.exercises.length >= 2) {
+          const exHtml = data.exercises
+            .map(
+              (ex, i) => `
+              <div class="link-item">
+                <label style="margin:0;display:flex;align-items:center;gap:6px;flex:1;min-width:0;cursor:pointer;">
+                  <input type="checkbox" class="batch-ex-cb" data-ex-idx="${i}" checked />
+                  <span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${escapeHtml(ex.title)}</span>
+                </label>
+              </div>`,
+            )
+            .join('');
+          $('urlNotice').innerHTML = `
+            <div class="alert alert-ok">
+              Đã bóc xong: <strong>${escapeHtml(data.title)}</strong> (${data.cards.length} thẻ · kiểu: ${data.mode} · ${escapeHtml(data.engine || 'rules')})
+              ${data.aiWarning ? `<div class="alert alert-warn" style="margin-top:6px;">${escapeHtml(data.aiWarning)}</div>` : ''}
+              <div style="margin-top:8px;"><strong>Phát hiện ${data.exercises.length} bài tập trên trang — chọn để tạo video theo batch:</strong></div>
+              <div class="link-list">${exHtml}</div>
+              <div class="row mt-2">
+                <button type="button" class="btn-success btn-sm" id="btnRunBatchExercises" style="flex:1;">🎬 Tạo video Batch các bài đã chọn</button>
+              </div>
+            </div>`;
+          $('urlNotice').dataset.exercisesJson = JSON.stringify(data.exercises);
+        }
+
+        if (!Array.isArray(data.exercises) || data.exercises.length < 2) {
+          const warningHtml = data.aiWarning ? `<div class="alert alert-warn">${escapeHtml(data.aiWarning)}</div>` : '';
+          const engineText = data.engine ? ` · ${escapeHtml(data.engine)}` : '';
+          const coverageText = data.coverage ? ` · giữ ${data.coverage}% từ khóa${data.sequenceCoverage ? ` · đúng thứ tự ${data.sequenceCoverage}%` : ''}` : '';
+          $('urlNotice').innerHTML = `<div class="alert alert-ok">Đã bóc xong: <strong>${escapeHtml(data.title)}</strong> (${data.cards.length} thẻ · kiểu: ${data.mode}${engineText}${coverageText})</div>${warningHtml}`;
+        }
+        if (data.aiWarning && $('urlNotice') && !$('urlNotice').innerHTML.includes(escapeHtml(data.aiWarning))) {
+          $('urlNotice').innerHTML += `<div class="alert alert-warn">${escapeHtml(data.aiWarning)}</div>`;
+        }
+        $('rawTextInput').value = data.rawText || '';
+        stopPreviewAudio('Chọn “Nghe thẻ này” để phát và chạy karaoke.');
+        cards = data.cards || [];
+        selectedIndex = 0;
+        $('playbackNotice').textContent = `Đã chuyển sang bộ thẻ mới: ${cards.length} thẻ.`;
+        renderCardsList();
+        refreshPreviewImage();
+      } catch (err) {
+        $('urlNotice').innerHTML = `<div class="alert alert-err">${escapeHtml(err.message)} — Bạn có thể copy nội dung trang và dán vào ô text bên dưới.</div>`;
+      } finally {
+        $('btnFetchUrl').disabled = false;
+      }
+    }
+
+    $('urlNotice').addEventListener('click', (e) => {
+      const btn = e.target.closest('button[data-pick-url]');
+      if (btn) {
+        fetchFromUrl(btn.dataset.pickUrl);
+        return;
+      }
+      const batchBtn = e.target.closest('#btnRunBatchLinks');
+      if (batchBtn) {
+        const checked = [...document.querySelectorAll('.batch-link-cb:checked')].map((el) => el.value);
+        runBatchFromLinks(checked);
+        return;
+      }
+
+      const batchExBtn = e.target.closest('#btnRunBatchExercises');
+      if (batchExBtn) {
+        const allEx = JSON.parse($('urlNotice').dataset.exercisesJson || '[]');
+        const checkedIndices = [...document.querySelectorAll('.batch-ex-cb:checked')].map((el) => Number(el.dataset.exIdx));
+        const picked = checkedIndices.map((idx) => allEx[idx]).filter(Boolean);
+        if (!picked.length) {
+          alert('Hãy tích chọn ít nhất 1 bài tập.');
+          return;
+        }
+        (async () => {
+          $('btnRenderMain').disabled = true;
+          $('btnRenderTop').disabled = true;
+          $('renderStatusBox').style.display = 'block';
+          $('renderResultBox').innerHTML = '';
+          const doneItems = [];
+          for (let i = 0; i < picked.length; i++) {
+            $('renderStageText').textContent = `[Batch bài ${i + 1}/${picked.length}] Đang tách thẻ bằng AI...`;
+            $('renderProgressBar').style.width = `${Math.round((i / picked.length) * 100)}%`;
+            try {
+              const pRes = await fetch('/api/parse-text', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ text: picked[i].rawText, title: picked[i].title, mode: $('modeSelect').value, ...getAiPayload() }),
+              });
+              const pData = await pRes.json();
+              if (!pRes.ok) throw new Error(pData.error || 'Không phân tích được bài trong batch.');
+              const result = await runSingleRenderConfig(pData.cards || [], (p, stage) => {
+                const overall = Math.round(((i + p / 100) / picked.length) * 100);
+                $('renderProgressBar').style.width = `${overall}%`;
+                $('renderStageText').textContent = `[Batch bài ${i + 1}/${picked.length}] ${stage} (${overall}%)`;
+              });
+              triggerAutoDownload(result.mp4Url, `${result.jobId}.mp4`);
+              doneItems.push({ title: picked[i].title, warning: pData.aiWarning || '', engine: pData.engine || 'rules', ...result });
+            } catch (err) {
+              doneItems.push({ title: picked[i].title, error: err.message });
+            }
+          }
+          $('renderProgressBar').style.width = '100%';
+          $('renderStageText').textContent = `Hoàn tất batch ${picked.length} bài.`;
+          $('btnRenderMain').disabled = false;
+          $('btnRenderTop').disabled = false;
+          $('renderResultBox').innerHTML = `<div class="alert alert-ok"><strong>Kết quả Batch (${doneItems.length} bài):</strong><ul style="padding-left:16px;margin:6px 0 0;">` +
+            doneItems.map((it) => it.error
+              ? `<li style="color:#991b1b;">${escapeHtml(it.title)} — Lỗi: ${escapeHtml(it.error)}</li>`
+              : `<li>${escapeHtml(it.title)} (${it.durationSec}s · ${escapeHtml(it.engine || 'rules')}) · <a href="${it.mp4Url}" download>MP4</a> · <a href="${it.srtUrl}" download>SRT</a>${it.warning ? `<div style="color:#92400e;">Cảnh báo phân tích: ${escapeHtml(it.warning)}</div>` : ''}</li>`
+            ).join('') + '</ul></div>';
+        })();
+      }
+
+    });
+
+    $('btnFetchUrl').addEventListener('click', () => fetchFromUrl());
+    $('btnLoadSample').addEventListener('click', loadSample);
+
+    $('btnParseText').addEventListener('click', async () => {
+      const text = $('rawTextInput').value.trim();
+      if (!text) {
+        $('urlNotice').innerHTML = '<div class="alert alert-warn">Hãy dán nội dung trước khi phân tích.</div>';
+        return;
+      }
+      const button = $('btnParseText');
+      button.disabled = true;
+      button.textContent = 'Đang phân tích...';
+      $('urlNotice').innerHTML = '<div class="alert alert-ok">Đang phân tích nội dung và kiểm tra phần bị bỏ sót...</div>';
+      try {
+        const res = await fetch('/api/parse-text', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ text, mode: $('modeSelect').value, ...getAiPayload() }),
+        });
+        const data = await res.json();
+        if (!res.ok) throw new Error(data.error || 'Lỗi phân tích text');
+        stopPreviewAudio('Chọn “Nghe thẻ này” để phát và chạy karaoke.');
+        cards = data.cards || [];
+        selectedIndex = 0;
+        $('playbackNotice').textContent = `Đã chuyển sang bộ thẻ mới: ${cards.length} thẻ.`;
+        renderCardsList();
+        refreshPreviewImage();
+        const warningHtml = data.aiWarning ? `<div class="alert alert-warn">${escapeHtml(data.aiWarning)}</div>` : '';
+        const detail = `${cards.length} thẻ · ${escapeHtml(data.mode || 'reading')} · ${escapeHtml(data.engine || 'rules')}${data.coverage ? ` · giữ ${data.coverage}% từ khóa` : ''}${data.sequenceCoverage ? ` · đúng thứ tự ${data.sequenceCoverage}%` : ''}`;
+        $('urlNotice').innerHTML = `<div class="alert alert-ok">Đã phân tích xong: ${detail}</div>${warningHtml}`;
+      } catch (err) {
+        $('urlNotice').innerHTML = `<div class="alert alert-err">${escapeHtml(err.message)}</div>`;
+      } finally {
+        button.disabled = false;
+        button.textContent = 'Phân tích text → Tạo thẻ';
+      }
+    });
+
+    async function startRender() {
+      if (!cards.length) {
+        alert('Chưa có thẻ nào để tạo video!');
+        return;
+      }
+      $('btnRenderMain').disabled = true;
+      $('btnRenderTop').disabled = true;
+      $('renderStatusBox').style.display = 'block';
+      $('renderProgressBar').style.width = '3%';
+      $('renderStageText').textContent = 'Đang gửi yêu cầu render...';
+      $('renderResultBox').innerHTML = '';
+
+      try {
+        const res = await fetch('/api/render', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            cards,
+            voice: $('voiceSelect').value,
+            palette: $('paletteSelect').value,
+            badge: $('badgeInput').value,
+            showTranslation: $('showTransCheck').checked,
+            resolution: $('resSelect').value,
+            quality: $('qualSelect').value,
+            fps: Number($('fpsSelect').value),
+            speechRate: Number($('speechRateSelect')?.value || 0.8),
+            elevenlabsApiKey: $('elevenKeyInput') ? $('elevenKeyInput').value.trim() : '',
+            karaoke: $('karaokeCheck') ? $('karaokeCheck').checked : true,
+          }),
+        });
+        const { jobId, error } = await res.json();
+        if (!res.ok) throw new Error(error || 'Không thể bắt đầu render.');
+
+        const timer = setInterval(async () => {
+          const jr = await fetch(`/api/jobs/${jobId}`);
+          const job = await jr.json();
+          $('renderProgressBar').style.width = `${job.progress || 0}%`;
+          $('renderStageText').textContent = `${job.stage || ''} (${job.progress || 0}%)`;
+
+          if (job.status === 'done') {
+            clearInterval(timer);
+            $('btnRenderMain').disabled = false;
+            $('btnRenderTop').disabled = false;
+            const r = job.result;
+            triggerAutoDownload(r.mp4Url, `${r.jobId}.mp4`);
+            $('renderResultBox').innerHTML = `
+              <div class="alert alert-ok">
+                <strong>Xong!</strong> Thời lượng ${r.durationSec}s (${r.cardCount} thẻ)
+                <video src="${r.mp4Url}" controls></video>
+                <div class="row mt-2">
+                  <a href="${r.mp4Url}" download style="flex:1;"><button type="button" class="btn-success" style="width:100%;">⬇ Tải MP4</button></a>
+                  <a href="${r.srtUrl}" download style="flex:1;"><button type="button" class="btn-secondary" style="width:100%;">⬇ Tải .SRT</button></a>
+                </div>
+                ${
+                  r.translatedSrtUrl
+                    ? `<div class="mt-2"><a href="${r.translatedSrtUrl}" download><button type="button" class="btn-secondary btn-sm" style="width:100%;">⬇ Tải .translated.srt</button></a></div>`
+                    : ''
+                }
+              </div>`;
+          } else if (job.status === 'error') {
+            clearInterval(timer);
+            $('btnRenderMain').disabled = false;
+            $('btnRenderTop').disabled = false;
+            $('renderResultBox').innerHTML = `<div class="alert alert-err">${escapeHtml(job.error)}</div>`;
+          }
+        }, 700);
+      } catch (err) {
+        $('btnRenderMain').disabled = false;
+        $('btnRenderTop').disabled = false;
+        $('renderResultBox').innerHTML = `<div class="alert alert-err">${escapeHtml(err.message)}</div>`;
+      }
+    }
+
+    $('btnRenderMain').addEventListener('click', startRender);
+    $('btnRenderTop').addEventListener('click', startRender);
+
+    
+    const savedKey = localStorage.getItem('ers_gemini_key') || '';
+    if ($('geminiKeyInput')) {
+      $('geminiKeyInput').value = savedKey;
+      $('geminiKeyInput').addEventListener('input', () => {
+        localStorage.setItem('ers_gemini_key', $('geminiKeyInput').value.trim());
+      });
+    }
+    function getAiPayload() {
+      return {
+        useAi: $('useAiCheck') ? $('useAiCheck').checked : true,
+        apiKey: $('geminiKeyInput') ? $('geminiKeyInput').value.trim() : '',
+        translationLang: $('transLangSelect') ? $('transLangSelect').value : 'Vietnamese',
+      };
+    }
+
+    
+    const savedElevenKey = localStorage.getItem('ers_eleven_key') || '';
+    if ($('elevenKeyInput')) {
+      $('elevenKeyInput').value = savedElevenKey;
+      $('elevenKeyInput').addEventListener('input', () => {
+        localStorage.setItem('ers_eleven_key', $('elevenKeyInput').value.trim());
+      });
+    }
+
+    $('btnLoadElevenVoices')?.addEventListener('click', async () => {
+      const key = $('elevenKeyInput').value.trim();
+      if (!key) {
+        $('elevenVoiceStatus').textContent = 'Hãy nhập API Key trước.';
+        return;
+      }
+      const button = $('btnLoadElevenVoices');
+      button.disabled = true;
+      $('elevenVoiceStatus').textContent = 'Đang kiểm tra API Key và tải giọng...';
+      try {
+        const res = await fetch('/api/elevenlabs-voices', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ elevenlabsApiKey: key }),
+        });
+        const data = await res.json();
+        if (!res.ok) throw new Error(data.error || 'Không tải được danh sách giọng.');
+        if (!Array.isArray(data.voices) || !data.voices.length) throw new Error('Tài khoản không trả về giọng đọc nào.');
+        const select = $('voiceSelect');
+        let group = select.querySelector('optgroup[data-eleven-dynamic="1"]');
+        if (group) group.remove();
+        group = document.createElement('optgroup');
+        group.label = `ElevenLabs · ${data.voices.length} giọng trong tài khoản`;
+        group.dataset.elevenDynamic = '1';
+        data.voices.forEach((voice) => {
+          const option = document.createElement('option');
+          option.value = `elevenlabs:${voice.id}`;
+          option.textContent = `${voice.name}${voice.category ? ` · ${voice.category}` : ''}`;
+          group.appendChild(option);
+        });
+        select.appendChild(group);
+        select.value = group.querySelector('option')?.value || select.value;
+        $('elevenVoiceStatus').textContent = `Key hợp lệ · đã tải ${data.voices.length} giọng từ tài khoản và chọn giọng đầu tiên.`;
+      } catch (err) {
+        $('elevenVoiceStatus').textContent = err.message;
+      } finally {
+        button.disabled = false;
+      }
+    });
+
+    let currentDiscoveredLinks = [];
+
+    function triggerAutoDownload(url, filename) {
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = filename || 'video.mp4';
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+    }
+
+    async function runSingleRenderConfig(customCards, onStatus) {
+      const res = await fetch('/api/render', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          cards: customCards,
+          voice: $('voiceSelect').value,
+          palette: $('paletteSelect').value,
+          badge: $('badgeInput').value,
+          showTranslation: $('showTransCheck').checked,
+          resolution: $('resSelect').value,
+          quality: $('qualSelect').value,
+          fps: Number($('fpsSelect').value),
+            speechRate: Number($('speechRateSelect')?.value || 0.8),
+          elevenlabsApiKey: $('elevenKeyInput') ? $('elevenKeyInput').value.trim() : '',
+          karaoke: $('karaokeCheck') ? $('karaokeCheck').checked : true,
+        }),
+      });
+      const { jobId, error } = await res.json();
+      if (!res.ok) throw new Error(error || 'Không thể bắt đầu render.');
+
+      return await new Promise((resolve, reject) => {
+        const timer = setInterval(async () => {
+          try {
+            const jr = await fetch(`/api/jobs/${jobId}`);
+            const job = await jr.json();
+            if (onStatus) onStatus(job.progress || 0, job.stage || '');
+            if (job.status === 'done') {
+              clearInterval(timer);
+              resolve(job.result);
+            } else if (job.status === 'error') {
+              clearInterval(timer);
+              reject(new Error(job.error || 'Lỗi render video.'));
+            }
+          } catch (e) {
+            clearInterval(timer);
+            reject(e);
+          }
+        }, 700);
+      });
+    }
+
+    async function runBatchFromLinks(selectedUrls) {
+      if (!selectedUrls.length) {
+        alert('Hãy tích chọn ít nhất 1 bài tập để tạo video theo batch.');
+        return;
+      }
+      $('btnRenderMain').disabled = true;
+      $('btnRenderTop').disabled = true;
+      $('renderStatusBox').style.display = 'block';
+      $('renderResultBox').innerHTML = '';
+
+      const doneItems = [];
+      for (let i = 0; i < selectedUrls.length; i++) {
+        const u = selectedUrls[i];
+        $('renderStageText').textContent = `[Batch ${i + 1}/${selectedUrls.length}] Đang lấy nội dung bài...`;
+        $('renderProgressBar').style.width = `${Math.round((i / selectedUrls.length) * 100)}%`;
+
+        try {
+          const exRes = await fetch('/api/extract-url', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ url: u, mode: $('modeSelect').value, ...getAiPayload() }),
+          });
+          const exData = await exRes.json();
+          if (!exRes.ok || !Array.isArray(exData.cards) || !exData.cards.length) {
+            throw new Error(exData.error || 'Không bóc được thẻ từ bài này.');
+          }
+
+          const result = await runSingleRenderConfig(exData.cards, (p, stage) => {
+            const overall = Math.round(((i + p / 100) / selectedUrls.length) * 100);
+            $('renderProgressBar').style.width = `${overall}%`;
+            $('renderStageText').textContent = `[Batch ${i + 1}/${selectedUrls.length}] ${stage} (${overall}%)`;
+          });
+
+          triggerAutoDownload(result.mp4Url, `${result.jobId}.mp4`);
+          doneItems.push({ title: exData.title || u, warning: exData.aiWarning || '', engine: exData.engine || 'rules', ...result });
+        } catch (err) {
+          doneItems.push({ title: u, error: err.message });
+        }
+      }
+
+      $('renderProgressBar').style.width = '100%';
+      $('renderStageText').textContent = `Hoàn tất batch ${selectedUrls.length} bài.`;
+      $('btnRenderMain').disabled = false;
+      $('btnRenderTop').disabled = false;
+
+      $('renderResultBox').innerHTML = `<div class="alert alert-ok"><strong>Kết quả Batch (${doneItems.length} bài):</strong><ul style="padding-left:16px;margin:6px 0 0;">` +
+        doneItems.map((it) => it.error
+          ? `<li style="color:#991b1b;">${escapeHtml(it.title)} — Lỗi: ${escapeHtml(it.error)}</li>`
+          : `<li>${escapeHtml(it.title)} (${it.durationSec}s · ${escapeHtml(it.engine || 'rules')}) · <a href="${it.mp4Url}" download>MP4</a> · <a href="${it.srtUrl}" download>SRT</a>${it.warning ? `<div style="color:#92400e;">Cảnh báo phân tích: ${escapeHtml(it.warning)}</div>` : ''}</li>`
+        ).join('') + '</ul></div>';
+    }
+
+    // Khởi tạo sẵn ví dụ mẫu khi mở trang
+    loadSample();
+  </script>
+</body>
+</html>

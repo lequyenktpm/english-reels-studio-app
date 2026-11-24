@@ -1,0 +1,305 @@
+{
+  "jobId": "video-mws61ksk",
+  "duration": 411.42292708333343,
+  "resolution": {
+    "width": 540,
+    "height": 960
+  },
+  "fps": 24,
+  "timeline": [
+    {
+      "start": 0,
+      "end": 10.265885416666666,
+      "subtitle": "Welcome to your English reading comprehension lesson. Today, we'll explore shopping places, fashion designers, and personal clothing styles.",
+      "translation": "英語の読解レッスンへようこそ。今日は、買い物をする場所、ファッションデザイナー、そして個人の服装スタイルについて学びます。"
+    },
+    {
+      "start": 10.265885416666666,
+      "end": 26.072354166666663,
+      "subtitle": "Books and Company is an interesting bookshop, open 9 am to 6 pm. They sell old and new books, magazines, pictures, old photographs, and music. If you like old books and pictures, this is the place for you.",
+      "translation": "ブックス＆カンパニーは、午前9時から午後6時まで営業している面白い本屋さんです。古本や新刊書、雑誌、絵、古い写真、音楽などを販売しています。古本や絵が好きなら、ここがおすすめです。"
+    },
+    {
+      "start": 26.072354166666663,
+      "end": 40.62494791666666,
+      "subtitle": "The Saturday Market is open 6 am to 4 pm. Here you can buy something for your home or just look around. They sell many old things: clocks, radios, suitcases, lamps, pictures, chairs, and more!",
+      "translation": "サタデーマーケットは午前6時から午後4時まで開いています。ここでは家のために何か買ったり、ただ見て回ったりできます。時計、ラジオ、スーツケース、ランプ、絵、椅子など、たくさんの古いものを売っています。"
+    },
+    {
+      "start": 40.62494791666666,
+      "end": 57.18606249999999,
+      "subtitle": "The Mega Home Store is open 8 am to 8 pm. It's a great place to buy new, inexpensive things for your home like beds, pillows, tables, chairs, and lamps. There’s also a good café with drinks, pizzas, and sandwiches.",
+      "translation": "メガホームストアは午前8時から午後8時まで営業しています。ベッド、枕、テーブル、椅子、ランプなど、家のために新しくて手頃なものを買うのに最適な場所です。飲み物、ピザ、サンドイッチが楽しめる良いカフェもあります。"
+    },
+    {
+      "start": 57.18606249999999,
+      "end": 66.43813541666665,
+      "subtitle": "Which place is good for someone who wants a new bed for their flat?",
+      "translation": "新しいベッドが欲しい人には、どの場所が良いですか？"
+    },
+    {
+      "start": 66.43813541666665,
+      "end": 69.61929166666665,
+      "subtitle": "The Mega Home Store sells new beds.",
+      "translation": "答え：メガホームストア"
+    },
+    {
+      "start": 69.61929166666665,
+      "end": 79.31253124999999,
+      "subtitle": "Which place is good for someone who loves old books and magazines?",
+      "translation": "古本や雑誌が好きな人には、どの場所が良いですか？"
+    },
+    {
+      "start": 79.31253124999999,
+      "end": 83.63147916666667,
+      "subtitle": "Books and Company sells old books and magazines.",
+      "translation": "答え：ブックス＆カンパニー"
+    },
+    {
+      "start": 83.63147916666667,
+      "end": 94.07938541666667,
+      "subtitle": "Which place is good for someone who always finishes work at 7:00 pm?",
+      "translation": "いつも午後7時に仕事が終わる人には、どの場所が良いですか？"
+    },
+    {
+      "start": 94.07938541666667,
+      "end": 97.70172916666667,
+      "subtitle": "The Mega Home Store is open until 8 pm.",
+      "translation": "答え：メガホームストア"
+    },
+    {
+      "start": 97.70172916666667,
+      "end": 106.60548958333334,
+      "subtitle": "Which place is good for someone who thinks old lamps are beautiful?",
+      "translation": "古いランプが美しいと思う人には、どの場所が良いですか？"
+    },
+    {
+      "start": 106.60548958333334,
+      "end": 111.66745833333334,
+      "subtitle": "The Saturday Market sells lots of old things, including lamps.",
+      "translation": "答え：サタデーマーケット"
+    },
+    {
+      "start": 111.66745833333334,
+      "end": 123.26848958333335,
+      "subtitle": "Fashion designers often make very different, interesting clothes for people. But sometimes they wear boring clothes, often the same clothes and colors themselves.",
+      "translation": "ファッションデザイナーは、人々のために非常に個性的で面白い服を作ることがよくあります。しかし、彼ら自身は地味な服を着たり、いつも同じ服や色を着たりすることがあります。"
+    },
+    {
+      "start": 123.26848958333335,
+      "end": 131.90897916666668,
+      "subtitle": "Tom Ford makes beautiful clothes for men and women. However, he often wears a white shirt and a black or dark grey jacket.",
+      "translation": "トム・フォードは男性用と女性用の美しい服を作ります。しかし、彼自身はよく白いシャツと黒またはダークグレーのジャケットを着ています。"
+    },
+    {
+      "start": 131.90897916666668,
+      "end": 140.03861458333336,
+      "subtitle": "Carolina Herrera makes clothes with lots of different colours. But she usually wears a black skirt and a white shirt.",
+      "translation": "キャロライナ・ヘレラはたくさんの異なる色の服を作ります。しかし、彼女はたいてい黒いスカートと白いシャツを着ています。"
+    },
+    {
+      "start": 140.03861458333336,
+      "end": 149.74720833333336,
+      "subtitle": "Alexander Wang is a young designer with unusual ideas. However, he usually wears a white T-shirt, black jeans, and a black jacket.",
+      "translation": "アレキサンダー・ワンは珍しいアイデアを持つ若いデザイナーです。しかし、彼自身はたいてい白いTシャツ、黒いジーンズ、黒いジャケットを着ています。"
+    },
+    {
+      "start": 149.74720833333336,
+      "end": 159.76817708333337,
+      "subtitle": "Fashion designers sometimes wear boring clothes. True or False?",
+      "translation": "ファッションデザイナーは時々地味な服を着る。本当ですか、嘘ですか？"
+    },
+    {
+      "start": 159.76817708333337,
+      "end": 164.18262500000003,
+      "subtitle": "That's true. They sometimes wear boring clothes.",
+      "translation": "答え：本当"
+    },
+    {
+      "start": 164.18262500000003,
+      "end": 173.1935104166667,
+      "subtitle": "Tom Ford never wears a black jacket. True or False?",
+      "translation": "トム・フォードは決して黒いジャケットを着ない。本当ですか、嘘ですか？"
+    },
+    {
+      "start": 173.1935104166667,
+      "end": 177.12033333333338,
+      "subtitle": "That's false. He often wears a black jacket.",
+      "translation": "答え：嘘（彼はよく黒いジャケットを着ます。）"
+    },
+    {
+      "start": 177.12033333333338,
+      "end": 186.86265625000004,
+      "subtitle": "Carolina Herrera often wears a white skirt. True or False?",
+      "translation": "キャロライナ・ヘレラはよく白いスカートを履く。本当ですか、嘘ですか？"
+    },
+    {
+      "start": 186.86265625000004,
+      "end": 191.13779166666671,
+      "subtitle": "That's false. She usually wears a black skirt.",
+      "translation": "答え：嘘（彼女はたいてい黒いスカートを履きます。）"
+    },
+    {
+      "start": 191.13779166666671,
+      "end": 200.89171875000005,
+      "subtitle": "Alexander Wang usually wears a jacket. True or False?",
+      "translation": "アレキサンダー・ワンはたいていジャケットを着る。本当ですか、嘘ですか？"
+    },
+    {
+      "start": 200.89171875000005,
+      "end": 205.3758333333334,
+      "subtitle": "That's true. He usually wears a black jacket.",
+      "translation": "答え：本当"
+    },
+    {
+      "start": 205.3758333333334,
+      "end": 216.8839895833334,
+      "subtitle": "Pete is a police officer and wears a dark blue uniform: jacket, trousers, and a white shirt. They also have big yellow police jackets to wear when they’re outside in the street.",
+      "translation": "ピートは警察官で、ダークブルーの制服を着ています。ジャケット、ズボン、白いシャツです。また、外で着るための大きな黄色い警察ジャケットも持っています。"
+    },
+    {
+      "start": 216.8839895833334,
+      "end": 226.18625000000006,
+      "subtitle": "These yellow jackets are very useful because people can easily see that they are police officers. Pete doesn’t have to worry about his work clothes.",
+      "translation": "これらの黄色いジャケットは、人々が彼らが警察官だと簡単にわかるので、とても役立ちます。ピートは仕事着について心配する必要がありません。"
+    },
+    {
+      "start": 226.18625000000006,
+      "end": 235.84840625000007,
+      "subtitle": "Pete isn't very interested in fashion. His wife, Jane, says his clothes are boring, but most of his friends’ clothes are the same as his!",
+      "translation": "ピートはファッションにあまり興味がありません。妻のジェーンは彼の服は地味だと言いますが、彼の友人のほとんどの服も彼と同じです！"
+    },
+    {
+      "start": 235.84840625000007,
+      "end": 246.83410416666675,
+      "subtitle": "When not at work, Pete likes to wear comfortable clothes, for example, jeans and a T-shirt or a jumper. His favourite item of clothing is his old brown jacket.",
+      "translation": "仕事がないときは、ジーンズやTシャツ、セーターなど、楽な服を着るのが好きです。彼のお気に入りの服は、古い茶色のジャケットです。"
+    },
+    {
+      "start": 246.83410416666675,
+      "end": 254.0671562500001,
+      "subtitle": "Pete doesn’t really have a favourite colour, but he tries not to wear dark blue because it’s the colour of his uniform.",
+      "translation": "ピートには特に好きな色はありませんが、制服の色なのでダークブルーは着ないようにしています。"
+    },
+    {
+      "start": 254.0671562500001,
+      "end": 265.07608333333343,
+      "subtitle": "He doesn’t have many expensive clothes, but for special events, like friends' weddings, he needs something nice. He has a suit by the designer Tom Ford.",
+      "translation": "彼は高価な服をたくさん持っていませんが、友人の結婚式のような特別なイベントでは、きちんとした服が必要です。デザイナーのトム・フォードのスーツを持っています。"
+    },
+    {
+      "start": 265.07608333333343,
+      "end": 276.0644062500001,
+      "subtitle": "His suit has dark grey trousers and a matching jacket. He usually wears this with a white shirt and tie. Pete usually goes shopping with Jane at the shopping mall.",
+      "translation": "彼のスーツはダークグレーのズボンとそれに合うジャケットです。彼はたいていこれを白いシャツとネクタイと一緒に着ます。ピートはたいていジェーンとショッピングモールへ買い物に行きます。"
+    },
+    {
+      "start": 276.0644062500001,
+      "end": 288.41110416666675,
+      "subtitle": "His favourite shop there is Marks and Spencer. Their clothes are usually comfortable and not very expensive. He buys all his clothes there, but Jane’s favourite shops are Next and Debenhams.",
+      "translation": "そこでの彼のお気に入りの店はマークス＆スペンサーです。そこの服はたいてい快適で、あまり高価ではありません。彼はそこで自分の服をすべて買いますが、ジェーンのお気に入りの店はネクストとデベンハムズです。"
+    },
+    {
+      "start": 288.41110416666675,
+      "end": 296.5164062500001,
+      "subtitle": "Pete’s uniform is blue. True or False?",
+      "translation": "ピートの制服は青い。本当ですか、嘘ですか？"
+    },
+    {
+      "start": 296.5164062500001,
+      "end": 300.35035416666676,
+      "subtitle": "That's true. His uniform is dark blue.",
+      "translation": "答え：本当"
+    },
+    {
+      "start": 300.35035416666676,
+      "end": 309.8604687500001,
+      "subtitle": "The police officers’ yellow jackets are useful. True or False?",
+      "translation": "警察官の黄色いジャケットは役に立つ。本当ですか、嘘ですか？"
+    },
+    {
+      "start": 309.8604687500001,
+      "end": 314.2284791666668,
+      "subtitle": "That's true. They are useful because people can see them.",
+      "translation": "答え：本当"
+    },
+    {
+      "start": 314.2284791666668,
+      "end": 323.16971875000013,
+      "subtitle": "Pete’s friends like fashionable clothes. True or False?",
+      "translation": "ピートの友達は流行の服が好きだ。本当ですか、嘘ですか？"
+    },
+    {
+      "start": 323.16971875000013,
+      "end": 329.9990416666668,
+      "subtitle": "That's false. Most of his friends' clothes are the same as his, which Jane calls boring.",
+      "translation": "答え：嘘（彼の友達の服も彼と同じで、ジェーンは地味だと言っています。）"
+    },
+    {
+      "start": 329.9990416666668,
+      "end": 338.3945937500001,
+      "subtitle": "His favourite colour is brown. True or False?",
+      "translation": "彼の好きな色は茶色だ。本当ですか、嘘ですか？"
+    },
+    {
+      "start": 338.3945937500001,
+      "end": 345.03816666666677,
+      "subtitle": "That's false. His favourite item is a brown jacket, but he doesn't have a favourite colour.",
+      "translation": "答え：嘘（彼のお気に入りのアイテムは茶色のジャケットですが、好きな色はありません。）"
+    },
+    {
+      "start": 345.03816666666677,
+      "end": 354.47863541666675,
+      "subtitle": "He has an expensive suit for special events. True or False?",
+      "translation": "彼は特別なイベントのために高価なスーツを持っている。本当ですか、嘘ですか？"
+    },
+    {
+      "start": 354.47863541666675,
+      "end": 358.7189375000001,
+      "subtitle": "That's true. He has a suit by designer Tom Ford.",
+      "translation": "答え：本当"
+    },
+    {
+      "start": 358.7189375000001,
+      "end": 368.5889687500001,
+      "subtitle": "He usually wears a dark grey shirt for special events. True or False?",
+      "translation": "彼は特別なイベントでたいていダークグレーのシャツを着る。本当ですか、嘘ですか？"
+    },
+    {
+      "start": 368.5889687500001,
+      "end": 373.5026458333334,
+      "subtitle": "That's false. He wears a white shirt and tie with his suit.",
+      "translation": "答え：嘘（彼はスーツに白いシャツとネクタイを合わせます。）"
+    },
+    {
+      "start": 373.5026458333334,
+      "end": 382.50192708333344,
+      "subtitle": "Marks and Spencer is in the shopping mall. True or False?",
+      "translation": "マークス＆スペンサーはショッピングモールにある。本当ですか、嘘ですか？"
+    },
+    {
+      "start": 382.50192708333344,
+      "end": 388.66947916666675,
+      "subtitle": "That's true. He goes to the shopping mall and his favourite shop there is Marks and Spencer.",
+      "translation": "答え：本当"
+    },
+    {
+      "start": 388.66947916666675,
+      "end": 397.9241770833334,
+      "subtitle": "Jane’s favourite shop is the same as Pete’s. True or False?",
+      "translation": "ジェーンのお気に入りの店はピートと同じだ。本当ですか、嘘ですか？"
+    },
+    {
+      "start": 397.9241770833334,
+      "end": 404.8115625000001,
+      "subtitle": "That's false. Pete's favourite is Marks and Spencer, but Jane's are Next and Debenhams.",
+      "translation": "答え：嘘（ピートのお気に入りはマークス＆スペンサーですが、ジェーンのお気に入りはネクストとデベンハムズです。）"
+    },
+    {
+      "start": 404.8115625000001,
+      "end": 411.42292708333343,
+      "subtitle": "Great job! You've completed the reading comprehension exercises. Keep practicing!",
+      "translation": "よくできました！読解演習を完了しました。これからも練習を続けてください！"
+    }
+  ]
+}
